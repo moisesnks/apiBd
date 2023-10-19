@@ -1,0 +1,13 @@
+#bd-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: bd-service
+spec:
+  selector:
+    app: bd-service
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9090
+  type: LoadBalancer
